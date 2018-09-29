@@ -91,7 +91,8 @@ public class OpenCVFaceDetection : MonoBehaviour
                 // Call detect R,G,B is actually B,G,R
                 OpenCVInterop.Detect(outFaces, _maxFaceDetectCount, ref detectedFaceCount, ref cR, ref cG, ref cB);
                 // Change the color to blue
-                spherecol.material.color = new Color32((byte)1, (byte)cB, (byte)cG, (byte)cR);
+                //spherecol.material.color = new Color32((byte)1, (byte)cB, (byte)cG, (byte)cR);
+                spherecol.material.color = new Color32((byte)cB, (byte)cG, (byte)cR, (byte)1);
             }
         }
         NormalizedFacePositions.Clear();
